@@ -1,0 +1,1442 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="csrf-token" content="G7u86xxMtpi1uG8f3gwzWnji6Luw3DfCsvjFSXTkZrA">
+    <meta name="theme-color" content="#082c50" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#082c50" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CampusConnect">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Official Campus Events Hub | CampusConnect &bull; Lokmanya Tilak College of Engineering</title>
+    
+    <!-- Favicon using Official CampusConnect Emblem -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/campusconnect-final-logo-256.png">
+    
+    <!-- Modern Typography: Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Primary Stylesheet with dynamic version to ensure instant browser refresh -->
+    <link rel="stylesheet" href="css/style.css?v=7.0">
+    
+    <script>
+        var contextPath = "";
+        var csrfToken = "G7u86xxMtpi1uG8f3gwzWnji6Luw3DfCsvjFSXTkZrA";
+        function closeMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.remove('active');
+            if (o) o.classList.remove('active');
+            if (t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-expanded', 'false');
+            }
+            document.body.style.overflow = '';
+        }
+        function openMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.add('active');
+            if (o) o.classList.add('active');
+            if (t) {
+                t.classList.add('active');
+                t.setAttribute('aria-expanded', 'true');
+            }
+            document.body.style.overflow = 'hidden';
+        }
+        function toggleMobileMenu(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            if (e && e.stopPropagation) e.stopPropagation();
+            var d = document.getElementById('mobileNavDrawer');
+            if (d && d.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+        window.closeMobileMenu = closeMobileMenu;
+        window.openMobileMenu = openMobileMenu;
+        window.toggleMobileMenu = toggleMobileMenu;
+    </script>
+</head>
+<body>
+
+    <!-- ==============================================
+         Unified Ultra-Premium Obsidian Glass Navbar (Single Sleek Header)
+         ============================================== -->
+    <header class="app-header">
+        <div class="header-inner">
+            <!-- Co-Branded Institutional & CampusConnect Lockup -->
+            <div class="brand-cluster">
+                <a href="index.html" class="brand-logo-link" title="CampusConnect • Lokmanya Tilak College of Engineering">
+                    <div class="brand-crest-wrap">
+                        <img src="images/ltce_official_logo.png" alt="LTCE Crest" class="brand-crest-img" onerror="this.src='images/clubs/ltce.svg'">
+                    </div>
+                    <span class="brand-divider-bar" aria-hidden="true"></span>
+                    <div class="brand-emblem-wrap">
+                        <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect Official Logo" class="brand-mark-img">
+                    </div>
+                    <div class="brand-text-group">
+                        <div class="brand-title-row">
+                            <span class="brand-main-title">Campus<span class="brand-highlight">Connect</span></span>
+                            <span class="brand-clg-badge">LTCE</span>
+                        </div>
+                        <span class="brand-tagline">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-links-list">
+                    <li><a href="index.html" class="nav-item active">Home</a></li>
+                    <li><a href="dashboard.html" class="nav-item ">Explore Events</a></li>
+                    <li><a href="clubs.html" class="nav-item nav-clubs-item ">
+                        <svg class="nav-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Clubs &amp; Chapters</span>
+                    </a></li>
+                    <li><a href="index.html#how-it-works" class="nav-item">How It Works</a></li>
+                    
+                    
+                </ul>
+            </nav>
+
+            <!-- Right Action Area (Auth Buttons / User Chip / Mobile Toggle) -->
+            <div class="header-actions">
+                <a href="https://ltce.in/" target="_blank" rel="noopener noreferrer" class="btn-portal-ghost" title="Official LTCE College Portal">
+                    <svg class="portal-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <span>ltce.in</span>
+                    <svg class="portal-ext-svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+
+                
+                    <a href="login.html" class="btn-clean-ghost">Sign In</a>
+                    <a href="register.html" class="btn-clean-primary">Get Started</a>
+                
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button type="button" class="btn-mobile-menu" id="mobileMenuToggle" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==============================================
+         3. Mobile Navigation Drawer (Obsidian Glass, Outside Header)
+         ============================================== -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" onclick="closeMobileMenu()" aria-hidden="true"></div>
+    <div class="mobile-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <div class="mobile-drawer-header">
+            <div class="mobile-drawer-brand">
+                <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect" style="height:34px; width:34px; border-radius:50%; object-fit:cover; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.3));">
+                <span class="mobile-drawer-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+            </div>
+            <button type="button" class="btn-drawer-close" id="mobileDrawerClose" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Quick Mobile Search Form -->
+        <form action="dashboard.html" method="GET" class="mobile-drawer-search">
+            <input type="text" name="search" placeholder="Search hackathons, clubs, CESA..." class="mobile-search-input" autocomplete="off">
+            <button type="submit" class="mobile-search-btn" aria-label="Search">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </form>
+
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:8px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home
+            </a></li>
+            <li><a href="dashboard.html" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:8px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Explore Events
+            </a></li>
+            <li><a href="clubs.html" class="mobile-nav-link highlight" onclick="closeMobileMenu()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:8px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Campus Clubs Directory
+            </a></li>
+            <li><a href="index.html#how-it-works" class="mobile-nav-link" onclick="closeMobileMenu()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:8px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>How It Works
+            </a></li>
+            
+            
+        </ul>
+
+        <div class="mobile-drawer-footer">
+            
+                <div class="mobile-auth-stack">
+                    <a href="register.html" class="btn btn-clean-primary" style="width:100%; text-align:center;" onclick="closeMobileMenu()">Student Sign Up</a>
+                    <a href="login.html" class="btn btn-clean-ghost" style="width:100%; text-align:center;" onclick="closeMobileMenu()">Organizer / Student Sign In</a>
+                </div>
+            
+            <div class="mobile-drawer-clg-note">
+                Lokmanya Tilak College of Engineering<br>Koparkhairane, Navi Mumbai
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         Native-Feel Mobile Bottom Navigation Bar (Phones: Android & iOS)
+         ============================================== -->
+    <nav class="mobile-bottom-nav" aria-label="Quick Mobile Navigation">
+        <div class="mobile-bottom-nav-inner">
+            <a href="index.html" class="mobile-bottom-link active">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </span>
+                <span class="mobile-bottom-label">Home</span>
+            </a>
+            
+            <a href="dashboard.html" class="mobile-bottom-link ">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </span>
+                <span class="mobile-bottom-label">Events</span>
+            </a>
+
+            <a href="clubs.html" class="mobile-bottom-link ">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </span>
+                <span class="mobile-bottom-label">Clubs</span>
+            </a>
+
+            
+                <a href="login.html" class="mobile-bottom-link ">
+                    <span class="mobile-bottom-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </span>
+                    <span class="mobile-bottom-label">Sign In</span>
+                </a>
+            
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+
+<!-- ==============================================
+     1. Modern Collegiate Split Hero Section
+     ============================================== -->
+<section class="collegiate-hero">
+    <div class="hero-container">
+        <div class="hero-split-grid">
+            
+            <!-- Left Column: Primary Pitch, Search & CTAs -->
+            <div class="hero-left-content">
+                <!-- Live Academic Announcement Pill -->
+                <div class="hero-live-pill">
+                    <span class="pulse-indicator"></span>
+                    <span class="live-pill-text">Official Campus Board &bull; <strong>LTCE Navi Mumbai</strong></span>
+                </div>
+
+                <!-- High-Impact Typography -->
+                <h1 class="hero-heading">
+                    <span class="hero-title-main">Campus Events &amp; </span>
+                    <span class="hero-title-sub">Opportunities</span>
+                    <span class="hero-gradient-text">LTCE Student Hub</span>
+                </h1>
+
+                <!-- Clear Value Proposition -->
+                <p class="hero-lead">
+                    Discover hackathons, workshops, and student club events at Lokmanya Tilak College of Engineering.
+                </p>
+
+                <!-- Search Form with Suggestions -->
+                <div class="hero-search-wrapper">
+                    <form action="dashboard.html" method="GET" class="hero-search-box" id="heroSearchForm">
+                        <div class="hero-search-inner">
+                            <span class="hero-search-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </span>
+                            <input type="text" id="heroSearchInput" name="search" class="hero-search-input" 
+                                   placeholder="Search hackathons, clubs, GDG..." 
+                                   autocomplete="off">
+                            <button type="submit" class="hero-search-submit">Search</button>
+                        </div>
+                    </form>
+                    <!-- Instant Search Suggestions Dropdown -->
+                    <div class="hero-search-suggestions" id="heroSuggestionsBox"></div>
+                </div>
+
+                <!-- Interactive Quick Trending Topics -->
+                <div class="hero-quick-topics">
+                    <span class="quick-topics-label">Trending:</span>
+                    <button type="button" class="topic-chip" onclick="quickHeroFilter('Hackathon')">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        Hackathons
+                    </button>
+                    <button type="button" class="topic-chip" onclick="quickHeroFilter('Workshop')">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        Workshops
+                    </button>
+                    <button type="button" class="topic-chip" onclick="quickHeroFilter('Technical')">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Tech Talks
+                    </button>
+                    <button type="button" class="topic-chip" onclick="quickHeroFilter('Competition')">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+                        Competitions
+                    </button>
+                </div>
+
+                <!-- Action CTAs -->
+                <div class="hero-action-buttons">
+                    <a href="dashboard.html" class="btn-hero-primary">
+                        Browse Events <span>&rarr;</span>
+                    </a>
+                    <a href="clubs.html" class="btn-hero-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:4px;" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Clubs Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Featured Pass / Opportunity Showcase Carousel -->
+            <div class="hero-right-visual">
+                
+                    <div class="hero-ticket-card" id="heroTicketCard">
+                        <!-- Interactive Top Control Bar -->
+                        <div class="ticket-top-tag">
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <span class="ticket-live-dot" id="ticketLiveDot"></span>
+                                <span id="ticketStatusText">FEATURED CAMPUS PASS</span>
+                            </div>
+                            <div class="ticket-nav-controls">
+                                <button type="button" class="ticket-nav-btn prev" onclick="changeHeroSlide(-1)" aria-label="Previous Event">&#8249;</button>
+                                <span class="ticket-counter" id="ticketCounter">1 / 6</span>
+                                <button type="button" class="ticket-nav-btn next" onclick="changeHeroSlide(1)" aria-label="Next Event">&#8250;</button>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Slides Viewport -->
+                        <div class="ticket-slides-viewport">
+                            
+                                <div class="ticket-slide active" 
+                                     data-slide-index="0" 
+                                     data-past="false">
+                                    <a href="event-details.html?id=6" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/navratri_carnival.jpg" alt="Navratri Carnival 2026 - Garba, Fun & Festive Vibes" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Cultural</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">AIMSA</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Navratri Carnival 2026 - Garba, Fun & Festive Vibes</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Thu, 29 Oct 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; QUADRANGLE, 4th floor, C Wing</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=6" class="btn-ticket-action ">
+                                            View Event &amp; Register &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="ticket-slide " 
+                                     data-slide-index="1" 
+                                     data-past="true">
+                                    <a href="event-details.html?id=1" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/gdg_hacktoberfest.jpg" alt="Orientation + GDG x Hacktoberfest HF 2026" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Technical</span>
+                                        
+                                            <span class="ticket-badge-concluded">&#9679; Past Event</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/gdg.png?v=3.0" alt="GDG on Campus LTCE" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">GDG on Campus LTCE</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Orientation + GDG x Hacktoberfest HF 2026</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Tue, 06 Oct 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; A510 Auditorium, LTCE Campus</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=1" class="btn-ticket-action concluded">
+                                            View Past Event Details &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="ticket-slide " 
+                                     data-slide-index="2" 
+                                     data-past="true">
+                                    <a href="event-details.html?id=2" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/iic_aimsa_poster.jpg" alt="Poster Making & Presentation Competition: Emerging Tech for Sustainability" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Competition</span>
+                                        
+                                            <span class="ticket-badge-concluded">&#9679; Past Event</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">AIMSA</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Poster Making & Presentation Competition: Emerging Tech for Sustainability</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Mon, 05 Oct 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; C Building, 4th Floor Quadrangle</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=2" class="btn-ticket-action concluded">
+                                            View Past Event Details &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="ticket-slide " 
+                                     data-slide-index="3" 
+                                     data-past="true">
+                                    <a href="event-details.html?id=3" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/rookery_hackathon.jpg" alt="Rookery Hackathon - Keep Building!" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Hackathon</span>
+                                        
+                                            <span class="ticket-badge-concluded">&#9679; Past Event</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">AIMSA</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Rookery Hackathon - Keep Building!</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Sat, 03 Oct 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; Lokmanya Tilak College of Engineering Campus</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=3" class="btn-ticket-action concluded">
+                                            View Past Event Details &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="ticket-slide " 
+                                     data-slide-index="4" 
+                                     data-past="true">
+                                    <a href="event-details.html?id=4" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/gd_workshop.jpg" alt="Hands-on Group Discussion Practice Workshop" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Workshop</span>
+                                        
+                                            <span class="ticket-badge-concluded">&#9679; Past Event</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/cesa.png?v=3.0" alt="CESA" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">CESA</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Hands-on Group Discussion Practice Workshop</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Thu, 01 Oct 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; C-410 Seminar Hall, LTCE Campus</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=4" class="btn-ticket-action concluded">
+                                            View Past Event Details &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                                <div class="ticket-slide " 
+                                     data-slide-index="5" 
+                                     data-past="true">
+                                    <a href="event-details.html?id=5" class="ticket-banner-wrap" style="display:block;">
+                                        <img src="images/project_deep_blue.jpg" alt="Orientation on Project Deep Blue Season 12" 
+                                             class="ticket-banner-img" onerror="this.src='images/default_event.jpg'">
+                                        <span class="ticket-badge-cat">Technical</span>
+                                        
+                                            <span class="ticket-badge-concluded">&#9679; Past Event</span>
+                                        
+                                    </a>
+
+                                    <div class="ticket-body">
+                                        <div class="ticket-club-row">
+                                            <img src="images/clubs/cesa.png?v=3.0" alt="CESA" 
+                                                 class="ticket-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                            <span class="ticket-club-name">CESA</span>
+                                            
+                                                <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 7px; border-radius:4px; margin-left:auto;">
+                                                    &#127891; Duty Leave
+                                                </span>
+                                            
+                                        </div>
+
+                                        <h3 class="ticket-title">Orientation on Project Deep Blue Season 12</h3>
+
+                                        <div class="ticket-meta-grid" style="margin-bottom: 1.25rem;">
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Date &amp; Time</span>
+                                                <span class="ticket-meta-val">&#128197; Mon, 07 Sep 2026</span>
+                                            </div>
+                                            <div class="ticket-meta-cell">
+                                                <span class="ticket-meta-label">Campus Venue</span>
+                                                <span class="ticket-meta-val">&#128205; Online Session (Virtual Link)</span>
+                                            </div>
+                                        </div>
+
+                                        <a href="event-details.html?id=5" class="btn-ticket-action concluded">
+                                            View Past Event Details &rarr;
+                                        </a>
+                                    </div>
+                                </div>
+                            
+                        </div>
+
+                        <!-- Indicator Dots -->
+                        <div class="ticket-dots-strip">
+                            
+                                <button type="button" class="ticket-dot active" 
+                                        onclick="goToHeroSlide(0)" 
+                                        aria-label="Go to slide 1"></button>
+                            
+                                <button type="button" class="ticket-dot " 
+                                        onclick="goToHeroSlide(1)" 
+                                        aria-label="Go to slide 2"></button>
+                            
+                                <button type="button" class="ticket-dot " 
+                                        onclick="goToHeroSlide(2)" 
+                                        aria-label="Go to slide 3"></button>
+                            
+                                <button type="button" class="ticket-dot " 
+                                        onclick="goToHeroSlide(3)" 
+                                        aria-label="Go to slide 4"></button>
+                            
+                                <button type="button" class="ticket-dot " 
+                                        onclick="goToHeroSlide(4)" 
+                                        aria-label="Go to slide 5"></button>
+                            
+                                <button type="button" class="ticket-dot " 
+                                        onclick="goToHeroSlide(5)" 
+                                        aria-label="Go to slide 6"></button>
+                            
+                        </div>
+                    </div>
+                
+
+                <!-- Floating Quick Chapter Chips -->
+                <div class="hero-quick-chapters">
+                    <span class="quick-chapters-label">Quick Filter by Club:</span>
+                    <div class="quick-chips-wrap">
+                        <a href="dashboard.html?search=CESA" class="hero-quick-chip">
+                            <img src="images/clubs/cesa.png" alt="CESA">
+                            <span>CESA</span>
+                        </a>
+                        <a href="dashboard.html?search=AIMSA" class="hero-quick-chip">
+                            <img src="images/clubs/aimsa.png" alt="AIMSA">
+                            <span>AIMSA</span>
+                        </a>
+                        <a href="dashboard.html?search=Data+Science" class="hero-quick-chip">
+                            <img src="images/clubs/dssa.png" alt="DSSA">
+                            <span>DSSA</span>
+                        </a>
+                        <a href="dashboard.html?search=GDG" class="hero-quick-chip">
+                            <img src="images/clubs/gdg.png?v=3.0" alt="GDG">
+                            <span>GDG</span>
+                        </a>
+                        <a href="dashboard.html?search=GFG" class="hero-quick-chip">
+                            <img src="images/clubs/gfg.png?v=3.0" alt="GFG">
+                            <span>GFG</span>
+                        </a>
+                        <a href="dashboard.html?search=E-CELL" class="hero-quick-chip">
+                            <img src="images/clubs/ecell.png" alt="E-CELL">
+                            <span>E-CELL</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==============================================
+     2. Campus Clubs & Student Bodies Strip (High Touch)
+     ============================================== -->
+<section class="clubs-strip-section">
+    <div class="section-container">
+        <div class="section-title-bar">
+            <div>
+                <span class="sub-header-pill">STUDENT CLUBS</span>
+                <h2 class="sub-header-title">Student Chapters &amp; Bodies</h2>
+            </div>
+            <a href="clubs.html" class="view-all-link">
+                Explore All Clubs &rarr;
+            </a>
+        </div>
+
+        <!-- Touch-Friendly Club Cards Grid / Reel (Sequence: CESA, AIMSA, DSSA, GDG, GFG, E-CELL, Technical Vidya, English Club) -->
+        <div class="clubs-reel">
+            <!-- 1. CESA -->
+            <a href="dashboard.html?search=CESA" class="club-reel-card">
+                <img src="images/clubs/cesa.png" alt="CESA" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">CESA</span>
+                    <span class="club-reel-tag dept">Computer Engg</span>
+                    <span class="club-reel-desc">CodeSprint &amp; Dev</span>
+                </div>
+            </a>
+
+            <!-- 2. AIMSA -->
+            <a href="dashboard.html?search=AIMSA" class="club-reel-card">
+                <img src="images/clubs/aimsa.png" alt="AIMSA" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">AIMSA</span>
+                    <span class="club-reel-tag dept">CSE (AI &amp; ML)</span>
+                    <span class="club-reel-desc">AI Hackathons &amp; Models</span>
+                </div>
+            </a>
+
+            <!-- 3. DSSA -->
+            <a href="dashboard.html?search=Data+Science" class="club-reel-card">
+                <img src="images/clubs/dssa.png" alt="DSSA" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">DSSA</span>
+                    <span class="club-reel-tag dept">Data Science Dept</span>
+                    <span class="club-reel-desc">Analytics &amp; Big Data</span>
+                </div>
+            </a>
+
+            <!-- 4. GDG -->
+            <a href="dashboard.html?search=GDG" class="club-reel-card">
+                <img src="images/clubs/gdg.png?v=3.0" alt="GDG" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">GDG on Campus</span>
+                    <span class="club-reel-tag open">Open For All</span>
+                    <span class="club-reel-desc">Google Tech &amp; GSoC</span>
+                </div>
+            </a>
+
+            <!-- 5. GFG -->
+            <a href="dashboard.html?search=GFG" class="club-reel-card">
+                <img src="images/clubs/gfg.png?v=3.0" alt="GFG" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">GFG Chapter</span>
+                    <span class="club-reel-tag open">Open For All</span>
+                    <span class="club-reel-desc">DSA &amp; Placement Prep</span>
+                </div>
+            </a>
+
+            <!-- 6. E-CELL -->
+            <a href="dashboard.html?search=E-CELL" class="club-reel-card">
+                <img src="images/clubs/ecell.png" alt="E-CELL" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">E-CELL LTCE</span>
+                    <span class="club-reel-tag open">Open For All</span>
+                    <span class="club-reel-desc">IIT Bombay E-Summit</span>
+                </div>
+            </a>
+
+            <!-- 7. Technical Vidya -->
+            <a href="dashboard.html?search=Technical+Vidya" class="club-reel-card">
+                <img src="images/clubs/technical_vidya.png" alt="Technical Vidya" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">Technical Vidya</span>
+                    <span class="club-reel-tag open">Open For All</span>
+                    <span class="club-reel-desc">Startup Incubator &amp; Talks</span>
+                </div>
+            </a>
+
+            <!-- 8. The English Club -->
+            <a href="dashboard.html?search=English" class="club-reel-card">
+                <img src="images/clubs/english_club.png" alt="The English Club" class="club-reel-img">
+                <div class="club-reel-info">
+                    <span class="club-reel-name">The English Club</span>
+                    <span class="club-reel-tag open">Open For All</span>
+                    <span class="club-reel-desc">Debates &amp; Public Speaking</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================================
+     3. Happening Soon: Live Events Grid
+     ============================================== -->
+<section class="live-events-section">
+    <div class="section-container">
+        <div class="section-title-bar">
+            <div>
+                <span class="sub-header-pill">CAMPUS EVENTS</span>
+                <h2 class="sub-header-title">Featured &amp; Upcoming Events</h2>
+            </div>
+            <a href="dashboard.html" class="btn btn-clean-ghost btn-sm">
+                View All Events &rarr;
+            </a>
+        </div>
+
+        <div class="events-cards-grid">
+            
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=6" class="card-media-wrap" style="display:block;">
+                            <img src="images/navratri_carnival.jpg" alt="Navratri Carnival 2026 - Garba, Fun & Festive Vibes" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge cultural">
+                                Cultural
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#60a5fa; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(96,165,250,0.3); z-index:2;">
+                                    📋 Google Form
+                                </span>
+                            
+                            
+                            <div class="card-date-stamp ">
+                                <span class="date-month">OCT</span>
+                                <span class="date-day">29</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">AIMSA</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=6">Navratri Carnival 2026 - Garba, Fun & Festive Vibes</a>
+                            </h3>
+
+                            <p class="card-event-snippet">Get ready to dance & celebrate! The Cultural Club of AIML Department invites you to an evening full of Garba, Dandiya, and festive beats.</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; QUADRANGLE, 4th floor, C Wing</span>
+                                <span class="card-meta-pill">&#128337; 3:00 PM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=6" class="btn-card-register">
+                                        Register via Google Form &nearr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=1" class="card-media-wrap" style="display:block;">
+                            <img src="images/gdg_hacktoberfest.jpg" alt="Orientation + GDG x Hacktoberfest HF 2026" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge technical">
+                                Technical
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#4ade80; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(74,222,128,0.3); z-index:2;">
+                                    ⚡ 1-Click Pass
+                                </span>
+                            
+                            
+                                <span class="card-concluded-badge">Past Event</span>
+                            
+                            <div class="card-date-stamp is-concluded">
+                                <span class="date-month">OCT</span>
+                                <span class="date-day">06</span>
+                                
+                                    <span class="date-tag-status ended">PAST</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/gdg.png?v=3.0" alt="GDG on Campus LTCE" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">GDG on Campus LTCE</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=1">Orientation + GDG x Hacktoberfest HF 2026</a>
+                            </h3>
+
+                            <p class="card-event-snippet">Kickstart your Open Source journey with GDG on Campus LTCE! Featuring expert guest speakers, Devcon passes worth $99, and exclusive MLH swag.</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; A510 Auditorium, LTCE Campus</span>
+                                <span class="card-meta-pill">&#128337; 2:00 PM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=1" class="btn-card-register concluded">
+                                        Event Ended &bull; Details &rarr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=2" class="card-media-wrap" style="display:block;">
+                            <img src="images/iic_aimsa_poster.jpg" alt="Poster Making & Presentation Competition: Emerging Tech for Sustainability" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge competition">
+                                Competition
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#4ade80; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(74,222,128,0.3); z-index:2;">
+                                    ⚡ 1-Click Pass
+                                </span>
+                            
+                            
+                                <span class="card-concluded-badge">Past Event</span>
+                            
+                            <div class="card-date-stamp is-concluded">
+                                <span class="date-month">OCT</span>
+                                <span class="date-day">05</span>
+                                
+                                    <span class="date-tag-status ended">PAST</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">AIMSA</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=2">Poster Making & Presentation Competition: Emerging Tech for Sustainability</a>
+                            </h3>
+
+                            <p class="card-event-snippet">Organized by Institution Innovation Council (IIC) x AIMSA. Present your ideas on AI, IoT, Robotics, and Renewable Energy for a greener future.</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; C Building, 4th Floor Quadrangle</span>
+                                <span class="card-meta-pill">&#128337; 1:00 PM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=2" class="btn-card-register concluded">
+                                        Event Ended &bull; Details &rarr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=3" class="card-media-wrap" style="display:block;">
+                            <img src="images/rookery_hackathon.jpg" alt="Rookery Hackathon - Keep Building!" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge hackathon">
+                                Hackathon
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#4ade80; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(74,222,128,0.3); z-index:2;">
+                                    ⚡ 1-Click Pass
+                                </span>
+                            
+                            
+                                <span class="card-concluded-badge">Past Event</span>
+                            
+                            <div class="card-date-stamp is-concluded">
+                                <span class="date-month">OCT</span>
+                                <span class="date-day">03</span>
+                                
+                                    <span class="date-tag-status ended">PAST</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/aimsa.png?v=3.0" alt="AIMSA" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">AIMSA</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=3">Rookery Hackathon - Keep Building!</a>
+                            </h3>
+
+                            <p class="card-event-snippet">8-Hour open innovation hackathon organized by Department of CSE AI & ML x Dropcode. Build anything, get $20-$30 seed funding, and win $500 AI credits!</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; Lokmanya Tilak College of Engineering Campus</span>
+                                <span class="card-meta-pill">&#128337; 9:00 AM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=3" class="btn-card-register concluded">
+                                        Event Ended &bull; Details &rarr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=4" class="card-media-wrap" style="display:block;">
+                            <img src="images/gd_workshop.jpg" alt="Hands-on Group Discussion Practice Workshop" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge workshop">
+                                Workshop
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#4ade80; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(74,222,128,0.3); z-index:2;">
+                                    ⚡ 1-Click Pass
+                                </span>
+                            
+                            
+                                <span class="card-concluded-badge">Past Event</span>
+                            
+                            <div class="card-date-stamp is-concluded">
+                                <span class="date-month">OCT</span>
+                                <span class="date-day">01</span>
+                                
+                                    <span class="date-tag-status ended">PAST</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/cesa.png?v=3.0" alt="CESA" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">CESA</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=4">Hands-on Group Discussion Practice Workshop</a>
+                            </h3>
+
+                            <p class="card-event-snippet">Interactive placement GD preparation session by Training & Placement Cell under IQAC. Practice live GDs, learn evaluation criteria, and gain confidence.</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; C-410 Seminar Hall, LTCE Campus</span>
+                                <span class="card-meta-pill">&#128337; 3:00 PM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=4" class="btn-card-register concluded">
+                                        Event Ended &bull; Details &rarr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="event-modern-card">
+                        <!-- Card Banner / Image -->
+                        <a href="event-details.html?id=5" class="card-media-wrap" style="display:block;">
+                            <img src="images/project_deep_blue.jpg" alt="Orientation on Project Deep Blue Season 12" 
+                                 class="card-event-img" onerror="this.src='images/default_event.jpg'">
+                            <span class="card-category-badge technical">
+                                Technical
+                            </span>
+                            
+                                <span style="position:absolute; bottom:12px; left:12px; background:rgba(15,23,42,0.85); color:#4ade80; font-size:0.68rem; font-weight:800; padding:3px 8px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(74,222,128,0.3); z-index:2;">
+                                    ⚡ 1-Click Pass
+                                </span>
+                            
+                            
+                                <span class="card-concluded-badge">Past Event</span>
+                            
+                            <div class="card-date-stamp is-concluded">
+                                <span class="date-month">SEP</span>
+                                <span class="date-day">07</span>
+                                
+                                    <span class="date-tag-status ended">PAST</span>
+                                
+                            </div>
+                        </a>
+
+                        <!-- Card Body -->
+                        <div class="card-details-wrap">
+                            <!-- Organizer Pill with Club Logo -->
+                            <div class="card-club-author">
+                                <img src="images/clubs/cesa.png?v=3.0" alt="CESA" 
+                                     class="card-club-mini-logo" onerror="this.src='images/campusconnect-mark.svg'">
+                                <span class="card-club-name">CESA</span>
+                            </div>
+
+                            <h3 class="card-event-title">
+                                <a href="event-details.html?id=5">Orientation on Project Deep Blue Season 12</a>
+                            </h3>
+
+                            <p class="card-event-snippet">Institution Innovation Council (IIC) invites students to the orientation of Project Deep Blue, a prestigious Mastek industry initiative.</p>
+
+                            <!-- Meta Details (Venue & Time) -->
+                            <div class="card-meta-list">
+                                <span class="card-meta-pill">&#128205; Online Session (Virtual Link)</span>
+                                <span class="card-meta-pill">&#128337; 3:30 PM</span>
+                            </div>
+
+                            <!-- Footer Actions -->
+                            <div class="card-footer-actions">
+                                
+                                    <a href="event-details.html?id=5" class="btn-card-register concluded">
+                                        Event Ended &bull; Details &rarr;
+                                    </a>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+(function() {
+    // 1. Hero Ticket Carousel Logic
+    let currentHeroSlide = 0;
+    const slides = document.querySelectorAll('#heroTicketCard .ticket-slide');
+    const dots = document.querySelectorAll('#heroTicketCard .ticket-dot');
+    const counter = document.getElementById('ticketCounter');
+    const statusText = document.getElementById('ticketStatusText');
+    const liveDot = document.getElementById('ticketLiveDot');
+    const totalSlides = slides.length;
+    let autoSlideInterval = null;
+
+    function updateHeroSlideUI() {
+        if (!slides.length) return;
+        slides.forEach((slide, idx) => {
+            if (idx === currentHeroSlide) {
+                slide.classList.add('active');
+                const isPast = slide.getAttribute('data-past') === 'true';
+                if (statusText) {
+                    statusText.textContent = isPast ? 'PAST EVENT ARCHIVE' : 'FEATURED CAMPUS PASS';
+                }
+                if (liveDot) {
+                    liveDot.style.backgroundColor = isPast ? '#94a3b8' : 'var(--ltce-gold)';
+                }
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            if (idx === currentHeroSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+
+        if (counter) {
+            counter.textContent = (currentHeroSlide + 1) + ' / ' + totalSlides;
+        }
+    }
+
+    window.changeHeroSlide = function(dir) {
+        if (totalSlides <= 1) return;
+        currentHeroSlide = (currentHeroSlide + dir + totalSlides) % totalSlides;
+        updateHeroSlideUI();
+        restartSlideTimer();
+    };
+
+    window.goToHeroSlide = function(idx) {
+        if (idx >= 0 && idx < totalSlides) {
+            currentHeroSlide = idx;
+            updateHeroSlideUI();
+            restartSlideTimer();
+        }
+    };
+
+    function startSlideTimer() {
+        if (totalSlides > 1) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(function() {
+                currentHeroSlide = (currentHeroSlide + 1) % totalSlides;
+                updateHeroSlideUI();
+            }, 5500);
+        }
+    }
+
+    function restartSlideTimer() {
+        clearInterval(autoSlideInterval);
+        startSlideTimer();
+    }
+
+    const ticketCard = document.getElementById('heroTicketCard');
+    if (ticketCard) {
+        ticketCard.addEventListener('mouseenter', function() {
+            clearInterval(autoSlideInterval);
+        });
+        ticketCard.addEventListener('mouseleave', function() {
+            startSlideTimer();
+        });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        ticketCard.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        ticketCard.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 45) {
+                window.changeHeroSlide(1);
+            } else if (touchEndX > touchStartX + 45) {
+                window.changeHeroSlide(-1);
+            }
+        }, { passive: true });
+    }
+
+    startSlideTimer();
+
+    // 2. Quick Trending Topics Filter
+    window.quickHeroFilter = function(query) {
+        const input = document.getElementById('heroSearchInput');
+        const form = document.getElementById('heroSearchForm');
+        if (input && form) {
+            input.value = query;
+            form.submit();
+        }
+    };
+
+    // 3. Instant Search Autocomplete
+    const heroEvents = [{"id":6,"title":"Navratri Carnival 2026 - Garba, Fun & Festive Vibes","organizer":"AIMSA","category":"Cultural","venue":"QUADRANGLE, 4th floor, C Wing","isPast":false},{"id":1,"title":"Orientation + GDG x Hacktoberfest HF 2026","organizer":"GDG on Campus LTCE","category":"Technical","venue":"A510 Auditorium, LTCE Campus","isPast":true},{"id":2,"title":"Poster Making & Presentation Competition: Emerging Tech for Sustainability","organizer":"AIMSA","category":"Competition","venue":"C Building, 4th Floor Quadrangle","isPast":true},{"id":3,"title":"Rookery Hackathon - Keep Building!","organizer":"AIMSA","category":"Hackathon","venue":"Lokmanya Tilak College of Engineering Campus","isPast":true},{"id":4,"title":"Hands-on Group Discussion Practice Workshop","organizer":"CESA","category":"Workshop","venue":"C-410 Seminar Hall, LTCE Campus","isPast":true},{"id":5,"title":"Orientation on Project Deep Blue Season 12","organizer":"CESA","category":"Technical","venue":"Online Session (Virtual Link)","isPast":true}];
+    const heroClubs = [
+        { name: "CESA - Computer Engg Association", query: "CESA" },
+        { name: "AIMSA - AI & Machine Learning", query: "AIMSA" },
+        { name: "DSSA - Data Science Association", query: "Data Science" },
+        { name: "GDG On Campus LTCE", query: "GDG" },
+        { name: "GFG Student Chapter", query: "GFG" },
+        { name: "E-CELL Entrepreneurship Club", query: "E-CELL" },
+        { name: "Technical Vidya Club", query: "Technical Vidya" },
+        { name: "English Literary Club", query: "English Club" }
+    ];
+
+    const searchInput = document.getElementById('heroSearchInput');
+    const suggestionsBox = document.getElementById('heroSuggestionsBox');
+
+    if (searchInput && suggestionsBox) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 2) {
+                suggestionsBox.innerHTML = '';
+                suggestionsBox.classList.remove('show');
+                return;
+            }
+
+            const matchedEvents = heroEvents.filter(function(e) {
+                return (e.title && e.title.toLowerCase().includes(query)) ||
+                       (e.organizer && e.organizer.toLowerCase().includes(query)) ||
+                       (e.category && e.category.toLowerCase().includes(query)) ||
+                       (e.venue && e.venue.toLowerCase().includes(query));
+            }).slice(0, 4);
+
+            const matchedClubs = heroClubs.filter(function(c) {
+                return c.name.toLowerCase().includes(query) ||
+                       c.query.toLowerCase().includes(query);
+            }).slice(0, 2);
+
+            if (matchedEvents.length === 0 && matchedClubs.length === 0) {
+                suggestionsBox.innerHTML = '<div style="padding:12px; color:#64748b; font-size:0.85rem; text-align:center;">No direct match. Press Enter to search all events.</div>';
+                suggestionsBox.classList.add('show');
+                return;
+            }
+
+            let html = '';
+            matchedEvents.forEach(function(ev) {
+                html += '<a href="event-details.html?id=' + ev.id + '" class="hero-suggest-item">' +
+                            '<div>' +
+                                '<div class="hero-suggest-title">' + ev.title + '</div>' +
+                                '<div class="hero-suggest-meta">' + ev.organizer + ' &bull; ' + ev.category + (ev.isPast ? ' &bull; <span style=\"color:#ef4444;\">Past Event</span>' : '') + '</div>' +
+                            '</div>' +
+                            '<span class="hero-suggest-badge">Event</span>' +
+                        '</a>';
+            });
+
+            matchedClubs.forEach(function(cl) {
+                html += '<a href="dashboard.html?search=' + encodeURIComponent(cl.query) + '" class="hero-suggest-item">' +
+                            '<div>' +
+                                '<div class="hero-suggest-title">' + cl.name + '</div>' +
+                                '<div class="hero-suggest-meta">Student Chapter &bull; View club events</div>' +
+                            '</div>' +
+                            '<span class="hero-suggest-badge" style="background:#e0f2fe; color:#0369a1;">Club</span>' +
+                        '</a>';
+            });
+
+            suggestionsBox.innerHTML = html;
+            suggestionsBox.classList.add('show');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                suggestionsBox.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                suggestionsBox.classList.remove('show');
+            }
+        });
+
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 2 && suggestionsBox.innerHTML.trim() !== '') {
+                suggestionsBox.classList.add('show');
+            }
+        });
+    }
+})();
+</script>
+
+
+    </main>
+
+    <!-- ==============================================
+         LTCE Institutional Footer
+         ============================================== -->
+    <footer class="ltce-footer">
+        <div class="footer-container">
+            <!-- Brand Column -->
+            <div class="footer-col-brand">
+                <div class="footer-brand-lockup">
+                    <img src="images/campusconnect-final-logo-128.png" alt="CampusConnect LTCE" class="footer-brand-emblem" width="44" height="44" style="width:44px; height:44px; max-width:44px; max-height:44px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+                    <div class="footer-brand-text">
+                        <span class="footer-brand-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+                        <span class="footer-brand-sub">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Centralized event and student opportunity platform for Lokmanya Tilak College of Engineering.
+                </p>
+                <div class="footer-address">
+                    Sector-4, Koparkhairane, Navi Mumbai &ndash; 400 709
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">All Events</a></li>
+                    <li><a href="clubs.html">Clubs Guide</a></li>
+                    <li><a href="my-registrations.html">My Registrations</a></li>
+                    <li><a href="login.html">Organizer Login</a></li>
+                </ul>
+            </div>
+
+            <!-- External College Portals -->
+            <div class="footer-col-links">
+                <h4>College Links</h4>
+                <ul>
+                    <li><a href="https://ltce.in/" target="_blank" rel="noopener noreferrer">Official LTCE Website &rarr;</a></li>
+                    <li><a href="https://ltce.in/iic-cell" target="_blank" rel="noopener noreferrer">IIC Innovation Portal</a></li>
+                    <li><a href="https://ltce.in/contact.php" target="_blank" rel="noopener noreferrer">Campus Map &amp; Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies & Terms -->
+            <div class="footer-col-links">
+                <h4>Legal &amp; Policies</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="https://ltce.in/" target="_blank" rel="noopener noreferrer">College Code of Conduct</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="bottom-bar-container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div class="bottom-copy">
+                    &copy; 2026 <strong>CampusConnect</strong> &bull; Lokmanya Tilak College of Engineering. All Rights Reserved.
+                </div>
+                <div style="display:flex; gap:14px; font-size:0.8rem;">
+                    <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
+                    <span style="color:#475569;">&bull;</span>
+                    <a href="terms.html" style="color:#94a3b8;">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=6.7"></script>
+</body>
+</html>
+

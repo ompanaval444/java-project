@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#082c50">
+    <title>404 - Page Not Found | CampusConnect • Lokmanya Tilak College of Engineering</title>
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/campusconnect-final-logo-256.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css?v=7.0">
+    
+    <script>
+        function closeMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.remove('active');
+            if (o) o.classList.remove('active');
+            if (t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-expanded', 'false');
+            }
+            document.body.style.overflow = '';
+        }
+        function openMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.add('active');
+            if (o) o.classList.add('active');
+            if (t) {
+                t.classList.add('active');
+                t.setAttribute('aria-expanded', 'true');
+            }
+            document.body.style.overflow = 'hidden';
+        }
+        function toggleMobileMenu(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            if (e && e.stopPropagation) e.stopPropagation();
+            var d = document.getElementById('mobileNavDrawer');
+            if (d && d.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Unified Ultra-Premium Obsidian Glass Navbar -->
+    <header class="app-header">
+        <div class="header-inner">
+            <div class="brand-cluster">
+                <a href="index.html" class="brand-logo-link" title="CampusConnect • Lokmanya Tilak College of Engineering">
+                    <div class="brand-crest-wrap">
+                        <img src="images/ltce_official_logo.png" alt="LTCE Crest" class="brand-crest-img" onerror="this.src='images/clubs/ltce.svg'">
+                    </div>
+                    <span class="brand-divider-bar" aria-hidden="true"></span>
+                    <div class="brand-emblem-wrap">
+                        <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect Official Logo" class="brand-mark-img">
+                    </div>
+                    <div class="brand-text-group">
+                        <div class="brand-title-row">
+                            <span class="brand-main-title">Campus<span class="brand-highlight">Connect</span></span>
+                            <span class="brand-clg-badge">LTCE</span>
+                        </div>
+                        <span class="brand-tagline">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-links-list">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="dashboard.html" class="nav-item">Explore Events</a></li>
+                    <li><a href="clubs.html" class="nav-item nav-clubs-item">
+                        <svg class="nav-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Clubs &amp; Chapters</span>
+                    </a></li>
+                    <li><a href="my-registrations.html" class="nav-item">My Passes</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://ltce.in/" target="_blank" rel="noopener noreferrer" class="btn-portal-ghost" title="Official LTCE College Portal">
+                    <span>ltce.in</span>
+                </a>
+                <a href="login.html" class="btn-clean-ghost">Sign In</a>
+                <a href="register.html" class="btn-clean-primary">Get Started</a>
+
+                <button type="button" class="btn-mobile-menu" id="mobileMenuToggle" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" onclick="closeMobileMenu()" aria-hidden="true"></div>
+    <div class="mobile-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <div class="mobile-drawer-header">
+            <div class="mobile-drawer-brand">
+                <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect" style="height:34px; width:34px; border-radius:50%; object-fit:cover;">
+                <span class="mobile-drawer-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+            </div>
+            <button type="button" class="btn-drawer-close" id="mobileDrawerClose" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-drawer-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="mobile-nav-link">Explore Events</a></li>
+                <li><a href="clubs.html" class="mobile-nav-link">Clubs &amp; Chapters</a></li>
+                <li><a href="my-registrations.html" class="mobile-nav-link">My Passes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content: 404 Error State -->
+    <main style="min-height: calc(100vh - 280px); display: flex; align-items: center; justify-content: center; padding: 60px 20px; background: radial-gradient(circle at 50% 20%, rgba(14,165,233,0.08) 0%, rgba(8,44,80,0.03) 50%, transparent 80%);">
+        <div style="max-width: 600px; width: 100%; text-align: center; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 20px; padding: 48px 32px; box-shadow: 0 20px 40px -15px rgba(8, 44, 80, 0.12);">
+            <div style="font-size: 5rem; font-weight: 900; line-height: 1; background: linear-gradient(135deg, var(--ltce-blue, #082c50), var(--ltce-blue-light, #0284c7)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px;">
+                404
+            </div>
+            <div style="display: inline-block; background: #fee2e2; color: #991b1b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;">
+                Page Not Found
+            </div>
+            <h1 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 12px;">
+                Lost in the Campus Quad?
+            </h1>
+            <p style="font-size: 0.95rem; color: #64748b; line-height: 1.6; margin-bottom: 32px;">
+                The event, pass, or page you were looking for doesn't exist or may have been relocated. Check out the active events hub or return to the homepage.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary" style="padding: 12px 24px; font-weight: 700;">
+                    Return to Homepage
+                </a>
+                <a href="dashboard.html" class="btn btn-secondary" style="padding: 12px 24px; font-weight: 700;">
+                    Explore Events
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="ltce-footer">
+        <div class="footer-container">
+            <div class="footer-col-brand">
+                <div class="footer-brand-lockup">
+                    <img src="images/campusconnect-final-logo-128.png" alt="CampusConnect LTCE" class="footer-brand-emblem" width="44" height="44" style="border-radius:50%;">
+                    <div class="footer-brand-text">
+                        <span class="footer-brand-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+                        <span class="footer-brand-sub">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Official centralized platform for campus events, student chapters, technical fests, and digital attendance verification at Lokmanya Tilak College of Engineering.
+                </p>
+            </div>
+            <div class="footer-col-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Discover Events</a></li>
+                    <li><a href="clubs.html">Student Chapters</a></li>
+                    <li><a href="my-registrations.html">My Registrations</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="bottom-bar-container">
+                <div class="bottom-copy">
+                    &copy; 2026 <strong>CampusConnect</strong> &bull; Lokmanya Tilak College of Engineering. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

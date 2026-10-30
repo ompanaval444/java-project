@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://campus-connectltce.vercel.app/sitemap.xml
+

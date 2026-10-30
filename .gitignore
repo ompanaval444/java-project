@@ -1,0 +1,25 @@
+# Operating System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary & Log files
+*.log
+*.tmp
+*.bak
+
+# Environment / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribution build output (optional)
+dist/
+build/
+

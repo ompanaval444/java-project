@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#082c50">
+    <title>My Event Passes &amp; Registrations | CampusConnect &bull; Lokmanya Tilak College of Engineering</title>
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/campusconnect-final-logo-256.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css?v=7.0">
+    
+    <script>
+        function closeMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.remove('active');
+            if (o) o.classList.remove('active');
+            if (t) {
+                t.classList.remove('active');
+                t.setAttribute('aria-expanded', 'false');
+            }
+            document.body.style.overflow = '';
+        }
+        function openMobileMenu() {
+            var d = document.getElementById('mobileNavDrawer');
+            var o = document.getElementById('mobileDrawerOverlay');
+            var t = document.getElementById('mobileMenuToggle');
+            if (d) d.classList.add('active');
+            if (o) o.classList.add('active');
+            if (t) {
+                t.classList.add('active');
+                t.setAttribute('aria-expanded', 'true');
+            }
+            document.body.style.overflow = 'hidden';
+        }
+        function toggleMobileMenu(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            if (e && e.stopPropagation) e.stopPropagation();
+            var d = document.getElementById('mobileNavDrawer');
+            if (d && d.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        }
+        window.closeMobileMenu = closeMobileMenu;
+        window.openMobileMenu = openMobileMenu;
+        window.toggleMobileMenu = toggleMobileMenu;
+    </script>
+    <style>
+        .reg-hero-bar {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg, 16px);
+            padding: 1.75rem 2rem;
+            color: #fff;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+        }
+        .reg-hero-user {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .reg-avatar {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.2);
+            flex-shrink: 0;
+        }
+        .reg-stats-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .reg-stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 100px;
+        }
+        .reg-stat-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #facc15;
+            display: block;
+        }
+        .reg-stat-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .ticket-pass-card {
+            background: var(--bg-surface, #ffffff);
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .ticket-pass-card {
+                flex-direction: row;
+            }
+        }
+        .ticket-pass-left {
+            width: 100%;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            .ticket-pass-left {
+                width: 260px;
+                flex-shrink: 0;
+            }
+        }
+        .ticket-pass-img {
+            width: 100%;
+            height: 100%;
+            min-height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .ticket-pass-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .ticket-stub-right {
+            border-top: 2px dashed #cbd5e1;
+            background: #f8fafc;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-width: 200px;
+        }
+        @media (min-width: 768px) {
+            .ticket-stub-right {
+                border-top: none;
+                border-left: 2px dashed #cbd5e1;
+            }
+        }
+        .qr-placeholder {
+            width: 86px;
+            height: 86px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .pass-modal-box {
+            background: #fff;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unified Header -->
+    <header class="app-header">
+        <div class="header-inner">
+            <div class="brand-cluster">
+                <a href="index.html" class="brand-logo-link" title="CampusConnect • Lokmanya Tilak College of Engineering">
+                    <div class="brand-crest-wrap">
+                        <img src="images/ltce_official_logo.png" alt="LTCE Crest" class="brand-crest-img" onerror="this.src='images/clubs/ltce.svg'">
+                    </div>
+                    <span class="brand-divider-bar" aria-hidden="true"></span>
+                    <div class="brand-emblem-wrap">
+                        <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect Official Logo" class="brand-mark-img">
+                    </div>
+                    <div class="brand-text-group">
+                        <div class="brand-title-row">
+                            <span class="brand-main-title">Campus<span class="brand-highlight">Connect</span></span>
+                            <span class="brand-clg-badge">LTCE</span>
+                        </div>
+                        <span class="brand-tagline">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul class="nav-links-list">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="dashboard.html" class="nav-item">Explore Events</a></li>
+                    <li><a href="clubs.html" class="nav-item nav-clubs-item">
+                        <svg class="nav-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Clubs &amp; Chapters</span>
+                    </a></li>
+                    <li><a href="my-registrations.html" class="nav-item active">My Passes</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://ltce.in/" target="_blank" rel="noopener noreferrer" class="btn-portal-ghost" title="Official LTCE College Portal">
+                    <svg class="portal-svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <span>ltce.in</span>
+                </a>
+
+                <div id="authActionsArea">
+                    <a href="login.html" class="btn-clean-ghost">Sign In</a>
+                    <a href="register.html" class="btn-clean-primary">Get Started</a>
+                </div>
+
+                <button type="button" class="btn-mobile-menu" id="mobileMenuToggle" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" onclick="closeMobileMenu()" aria-hidden="true"></div>
+    <div class="mobile-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <div class="mobile-drawer-header">
+            <div class="mobile-drawer-brand">
+                <img src="images/campusconnect-final-logo-trans.png" alt="CampusConnect" style="height:34px; width:34px; border-radius:50%; object-fit:cover;">
+                <span class="mobile-drawer-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+            </div>
+            <button type="button" class="btn-drawer-close" id="mobileDrawerClose" onclick="closeMobileMenu()" aria-label="Close navigation menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="dashboard.html" class="mobile-nav-link" onclick="closeMobileMenu()">Explore Events</a></li>
+            <li><a href="clubs.html" class="mobile-nav-link highlight" onclick="closeMobileMenu()">Campus Clubs Directory</a></li>
+            <li><a href="my-registrations.html" class="mobile-nav-link" onclick="closeMobileMenu()">My Registered Passes</a></li>
+        </ul>
+
+        <div class="mobile-drawer-footer">
+            <div class="mobile-auth-stack">
+                <a href="register.html" class="btn btn-clean-primary" style="width:100%; text-align:center;">Student Sign Up</a>
+                <a href="login.html" class="btn btn-clean-ghost" style="width:100%; text-align:center;">Sign In</a>
+            </div>
+            <div class="mobile-drawer-clg-note">
+                Lokmanya Tilak College of Engineering<br>Koparkhairane, Navi Mumbai
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" aria-label="Quick Mobile Navigation">
+        <div class="mobile-bottom-nav-inner">
+            <a href="index.html" class="mobile-bottom-link">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                </span>
+                <span class="mobile-bottom-label">Home</span>
+            </a>
+            <a href="dashboard.html" class="mobile-bottom-link">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </span>
+                <span class="mobile-bottom-label">Events</span>
+            </a>
+            <a href="clubs.html" class="mobile-bottom-link">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </span>
+                <span class="mobile-bottom-label">Clubs</span>
+            </a>
+            <a href="my-registrations.html" class="mobile-bottom-link active">
+                <span class="mobile-bottom-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </span>
+                <span class="mobile-bottom-label">Passes</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div class="container">
+
+            <!-- Student Profile & Pass Statistics Summary Bar -->
+            <div class="reg-hero-bar">
+                <div class="reg-hero-user">
+                    <div class="reg-avatar" id="userAvatar">OP</div>
+                    <div>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <h2 style="font-size:1.35rem; font-weight:800; margin:0;" id="userName">Om Panchal</h2>
+                            <span style="background:rgba(234,179,8,0.2); color:#facc15; border:1px solid rgba(234,179,8,0.4); font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:999px;">Verified Student</span>
+                        </div>
+                        <p style="margin:4px 0 0; font-size:0.85rem; color:#94a3b8;" id="userCollegeInfo">
+                            Computer Engineering &bull; TE (Third Year) &bull; LTCE Navi Mumbai
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reg-stats-grid">
+                    <div class="reg-stat-card">
+                        <span class="reg-stat-num" id="statPassCount">1</span>
+                        <span class="reg-stat-label">Active Passes</span>
+                    </div>
+                    <div class="reg-stat-card">
+                        <span class="reg-stat-num" style="color:#4ade80;">1</span>
+                        <span class="reg-stat-label">Duty Leave</span>
+                    </div>
+                    <div class="reg-stat-card">
+                        <span class="reg-stat-num" style="color:#60a5fa;">0</span>
+                        <span class="reg-stat-label">Concluded</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Title Row -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:10px;">
+                <div>
+                    <h1 style="font-size:1.5rem; font-weight:800; color:var(--text-primary); margin:0;">
+                        My Registered Event Passes
+                    </h1>
+                    <p style="font-size:0.875rem; color:var(--text-muted); margin:4px 0 0;">
+                        Present these digital passes at the event entrance for QR check-in and attendance recording.
+                    </p>
+                </div>
+                <a href="dashboard.html" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:6px;">
+                    <span>+ Discover More Events</span>
+                </a>
+            </div>
+
+            <!-- Registered Passes Container -->
+            <div id="passesContainer">
+                <!-- Injected via JavaScript or default item -->
+            </div>
+
+            <!-- Empty State (Shown if all unregistered) -->
+            <div id="emptyPassesState" style="display:none; text-align:center; padding:4rem 1.5rem; background:var(--bg-surface); border:1px dashed var(--border-color); border-radius:16px;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🎟️</div>
+                <h3 style="font-size:1.25rem; font-weight:700;">No Registered Event Passes Yet</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem; max-width:440px; margin:0.5rem auto 1.5rem;">
+                    You haven't reserved any campus passes yet. Explore workshops, hackathons, and cultural fests at LTCE!
+                </p>
+                <a href="dashboard.html" class="btn btn-primary">Browse Campus Events</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Digital Pass Modal for Download / Inspection -->
+    <div class="modal-overlay" id="passModal" onclick="closePassModal(event)">
+        <div class="pass-modal-box" onclick="event.stopPropagation()">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:1rem; margin-bottom:1.25rem;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <img src="images/campusconnect-final-logo-trans.png" alt="Logo" style="width:28px; height:28px; border-radius:50%;">
+                    <strong style="font-size:1.1rem; color:var(--ltce-blue-dark);">Official Campus Pass</strong>
+                </div>
+                <button type="button" onclick="closePassModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b;">&times;</button>
+            </div>
+
+            <div style="text-align:center; margin-bottom:1.5rem;">
+                <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; color:#64748b; font-weight:700;">Lokmanya Tilak College of Engineering</div>
+                <h3 id="modalEventTitle" style="font-size:1.2rem; font-weight:800; margin:6px 0; color:#0f172a;">Navratri Carnival 2026</h3>
+                <div style="display:inline-block; background:#dcfce7; color:#166534; font-size:0.75rem; font-weight:700; padding:2px 10px; border-radius:999px; margin-top:4px;">
+                    🎓 Duty Leave Confirmed
+                </div>
+            </div>
+
+            <div style="background:#f8fafc; border-radius:12px; padding:1.25rem; border:1px solid #e2e8f0; margin-bottom:1.5rem;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:0.85rem; margin-bottom:1rem;">
+                    <div>
+                        <span style="color:#64748b; display:block; font-size:0.75rem;">STUDENT NAME</span>
+                        <strong id="modalStudentName">Om Panchal</strong>
+                    </div>
+                    <div>
+                        <span style="color:#64748b; display:block; font-size:0.75rem;">PASS ID</span>
+                        <strong style="font-family:monospace; color:#2563eb;">LTCE-2026-6819</strong>
+                    </div>
+                    <div>
+                        <span style="color:#64748b; display:block; font-size:0.75rem;">DATE &amp; TIME</span>
+                        <strong id="modalDateTime">Thu, 29 Oct 2026 &bull; 3:00 PM</strong>
+                    </div>
+                    <div>
+                        <span style="color:#64748b; display:block; font-size:0.75rem;">VENUE</span>
+                        <strong id="modalVenue">Quadrangle, C Wing 4th Flr</strong>
+                    </div>
+                </div>
+
+                <div style="text-align:center; padding-top:0.75rem; border-top:1px dashed #cbd5e1;">
+                    <div style="font-family:monospace; font-size:1.6rem; letter-spacing:4px; font-weight:900; color:#0f172a; margin-bottom:4px;">
+                        ||||| ||| |||| || |||||||
+                    </div>
+                    <span style="font-size:0.7rem; color:#94a3b8;">SCAN CODE AT VENUE ENTRANCE</span>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-full" onclick="window.print()">
+                Print / Save Pass (PDF)
+            </button>
+        </div>
+    </div>
+
+    <!-- Institutional Footer -->
+    <footer class="ltce-footer">
+        <div class="footer-container">
+            <div class="footer-col-brand">
+                <div class="footer-brand-lockup">
+                    <img src="images/campusconnect-final-logo-128.png" alt="CampusConnect LTCE" class="footer-brand-emblem" width="44" height="44" style="border-radius:50%;">
+                    <div class="footer-brand-text">
+                        <span class="footer-brand-title">Campus<span style="color:var(--ltce-gold);">Connect</span></span>
+                        <span class="footer-brand-sub">Lokmanya Tilak College of Engineering</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Centralized event and student opportunity platform for Lokmanya Tilak College of Engineering.
+                </p>
+                <div class="footer-address">
+                    Sector-4, Koparkhairane, Navi Mumbai &ndash; 400 709
+                </div>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">All Events</a></li>
+                    <li><a href="clubs.html">Clubs Guide</a></li>
+                    <li><a href="my-registrations.html">My Registrations</a></li>
+                    <li><a href="login.html">Organizer Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>College Links</h4>
+                <ul>
+                    <li><a href="https://ltce.in/" target="_blank" rel="noopener noreferrer">Official LTCE Website &rarr;</a></li>
+                    <li><a href="https://ltce.in/iic-cell" target="_blank" rel="noopener noreferrer">IIC Innovation Portal</a></li>
+                    <li><a href="https://ltce.in/contact.php" target="_blank" rel="noopener noreferrer">Campus Map &amp; Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Legal &amp; Policies</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="https://ltce.in/" target="_blank" rel="noopener noreferrer">College Code of Conduct</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="bottom-bar-container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <div class="bottom-copy">
+                    &copy; 2026 <strong>CampusConnect</strong> &bull; Lokmanya Tilak College of Engineering. All Rights Reserved.
+                </div>
+                <div style="display:flex; gap:14px; font-size:0.8rem;">
+                    <a href="privacy.html" style="color:#94a3b8;">Privacy Policy</a>
+                    <span style="color:#475569;">&bull;</span>
+                    <a href="terms.html" style="color:#94a3b8;">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=6.7"></script>
+    <script>
+    // Registered Passes Management
+    const defaultPasses = [
+        {
+            id: 6,
+            title: "Navratri Carnival 2026 - Garba, Fun & Festive Vibes",
+            organizer: "AIMSA",
+            clubLogo: "images/clubs/aimsa.png",
+            category: "Cultural",
+            image: "images/navratri_carnival.jpg",
+            date: "Thu, 29 Oct 2026",
+            time: "3:00 PM - 7:00 PM",
+            venue: "QUADRANGLE, 4th floor, C Wing",
+            passId: "LTCE-2026-6819",
+            dlStatus: "Duty Leave Approved",
+            isPast: false
+        }
+    ];
+
+    function loadPasses() {
+        let stored = localStorage.getItem('my_registered_passes');
+        let passes = stored ? JSON.parse(stored) : defaultPasses;
+        const container = document.getElementById('passesContainer');
+        const emptyState = document.getElementById('emptyPassesState');
+        const statCount = document.getElementById('statPassCount');
+
+        if (!passes || passes.length === 0) {
+            container.innerHTML = '';
+            emptyState.style.display = 'block';
+            if (statCount) statCount.textContent = '0';
+            return;
+        }
+
+        emptyState.style.display = 'none';
+        if (statCount) statCount.textContent = passes.length;
+
+        let html = '';
+        passes.forEach(p => {
+            html += `
+            <div class="ticket-pass-card" id="pass-card-${p.id}">
+                <div class="ticket-pass-left">
+                    <img src="${p.image}" alt="${p.title}" class="ticket-pass-img" onerror="this.src='images/default_event.jpg'">
+                    <span class="card-category-badge cultural" style="position:absolute; top:12px; left:12px;">${p.category}</span>
+                </div>
+                <div class="ticket-pass-content">
+                    <div>
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                            <img src="${p.clubLogo}" alt="${p.organizer}" style="width:20px; height:20px; border-radius:50%; object-fit:cover;">
+                            <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted);">${p.organizer}</span>
+                            <span style="display:inline-flex; align-items:center; gap:3px; font-size:0.7rem; font-weight:700; color:#166534; background:#dcfce7; border:1px solid #bbf7d0; padding:2px 8px; border-radius:4px; margin-left:auto;">
+                                🎓 ${p.dlStatus}
+                            </span>
+                        </div>
+                        <h3 style="font-size:1.15rem; font-weight:800; margin:0 0 10px; color:var(--text-primary); line-height:1.35;">
+                            ${p.title}
+                        </h3>
+                        <div style="display:flex; flex-wrap:wrap; gap:14px; font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">
+                            <span>📅 ${p.date} &bull; ⏰ ${p.time}</span>
+                            <span>📍 ${p.venue}</span>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; border-top:1px solid var(--border-color); padding-top:12px;">
+                        <a href="event-details.html?id=${p.id}" style="font-size:0.85rem; font-weight:600; color:var(--ltce-blue);">
+                            View Event Description &rarr;
+                        </a>
+                        <button type="button" onclick="cancelRegistration(${p.id})" style="background:none; border:none; color:#ef4444; font-size:0.8rem; cursor:pointer; font-weight:600;">
+                            Cancel Pass
+                        </button>
+                    </div>
+                </div>
+                <div class="ticket-stub-right">
+                    <div class="qr-placeholder">📱</div>
+                    <span style="font-size:0.7rem; font-weight:700; color:#64748b;">DIGITAL PASS</span>
+                    <strong style="font-family:monospace; font-size:0.85rem; color:#0f172a; margin:2px 0 8px;">${p.passId}</strong>
+                    <button type="button" class="btn btn-outline btn-sm" onclick="openPassModal('${p.title}', '${p.date} &bull; ${p.time}', '${p.venue}')" style="width:100%; font-size:0.75rem; padding:6px 10px;">
+                        View / Print Pass
+                    </button>
+                </div>
+            </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    function cancelRegistration(id) {
+        if (!confirm('Are you sure you want to cancel this campus pass?')) return;
+        let stored = localStorage.getItem('my_registered_passes');
+        let passes = stored ? JSON.parse(stored) : defaultPasses;
+        passes = passes.filter(p => p.id !== id);
+        localStorage.setItem('my_registered_passes', JSON.stringify(passes));
+        loadPasses();
+    }
+
+    function openPassModal(title, datetime, venue) {
+        document.getElementById('modalEventTitle').textContent = title;
+        document.getElementById('modalDateTime').textContent = datetime;
+        document.getElementById('modalVenue').textContent = venue;
+        document.getElementById('passModal').classList.add('active');
+    }
+
+    function closePassModal(e) {
+        document.getElementById('passModal').classList.remove('active');
+    }
+
+    // Check logged in student
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+            try {
+                const user = JSON.parse(currentUser);
+                if (user.name) {
+                    document.getElementById('userName').textContent = user.name;
+                    document.getElementById('modalStudentName').textContent = user.name;
+                    const initials = user.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+                    document.getElementById('userAvatar').textContent = initials;
+                }
+                if (user.department || user.year) {
+                    document.getElementById('userCollegeInfo').textContent = `${user.department || 'Computer Engg'} • ${user.year || 'TE'} • LTCE Navi Mumbai`;
+                }
+                const authArea = document.getElementById('authActionsArea');
+                if (authArea) {
+                    authArea.innerHTML = `
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span style="font-size:0.85rem; font-weight:600; color:#fff;">${user.name}</span>
+                            <button onclick="logout()" class="btn-clean-ghost" style="padding:4px 10px; font-size:0.75rem;">Logout</button>
+                        </div>
+                    `;
+                }
+            } catch (e) {}
+        }
+        loadPasses();
+    });
+
+    function logout() {
+        localStorage.removeItem('currentUser');
+        window.location.reload();
+    }
+    </script>
+</body>
+</html>
